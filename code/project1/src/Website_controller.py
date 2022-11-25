@@ -1,5 +1,6 @@
 """Gets a website controller and opens it."""
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 from .Hardcoded import Hardcoded
 
@@ -17,18 +18,16 @@ class Website_controller:
         self.hardcoded = Hardcoded()
         # To run Firefox browser in foreground
         print("Loading geckodriver")
-        # TODO: write a try catch, if it fails:
-        # TODO: check if firefox is installed with snap.
-        # TODO: if yes, ask user to uninstall and re-install with link.
-        
         try:
-            # TODO: get the profile automatically.
-            self.driver = webdriver.Firefox(
-                # executable_path=r"firefox_driver/geckodriver",capabilities=firefox_capabilities
-                executable_path=r"firefox_driver/geckodriver",
-                firefox_profile=self.hardcoded.firefox_profile,
-                #firefox_profile=firefox_profile,
-            )
+            options = Options()
+
+            options.add_argument('-profile')
+            options.add_argument(self.hardcoded.firefox_profile)
+
+            options.set_preference('dom.webdriver.enabled', False)
+            options.set_preference('useAutomationExtension', False)
+
+            self.driver = webdriver.Firefox(options=options,executable_path=r"firefox_driver/geckodriver",)
         # pylint: disable=W0707
         except:
             # pylint: disable=W0707

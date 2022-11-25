@@ -4,6 +4,9 @@
 # pylint: disable=C0301
 # pylint: disable=R0902
 # pylint: disable=R0903
+import os
+
+
 class Hardcoded:
     """Runs jupyter notebooks, converts them to pdf, exports the notebook pdfs
     to latex and compiles the latex report of the incoming project nr."""
@@ -33,6 +36,24 @@ class Hardcoded:
         #firefox_profile.set_preference("browser.privatebrowsing.autostart", False)
         
         self.firefox_profile = (
-            "/home/name/.mozilla/firefox/1k7nmeyz.default-release"
+            #"/home/name/.mozilla/firefox/1k7nmeyz.default-release"
+            get_default_profile_dir()
         )
+        
 
+
+def get_default_profile_dir():
+    from os import listdir
+    import getpass
+    ubuntu_username=getpass.getuser()
+    #print(f'ubuntu_username={ubuntu_username}')
+    some_dir=f'/home/{ubuntu_username}/.mozilla/firefox/'
+    #print(f'some_dir={some_dir}')
+    from glob import glob
+    subdirs=glob(f'{some_dir}/*/', recursive = True)
+    #print(f'subdirs={subdirs}')
+    default_profile = list(filter(lambda x: x.endswith('.default-release/'), subdirs))
+    #print(f'default_profile={default_profile}')
+    if len(default_profile)>1 or len(default_profile)<0:
+        raise Exception(f"Error, default profile not found:{default_profile}")
+    return default_profile[0]

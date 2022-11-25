@@ -1,5 +1,6 @@
 """Contains the hardcoded data for this project."""
-
+import getpass
+from glob import glob
 
 # pylint: disable=C0301
 # pylint: disable=R0902
@@ -41,20 +42,15 @@ class Hardcoded:
 
 
 def get_default_profile_dir():
-    import getpass
+    """Finds the default Firefox profile path and returns it."""
 
     ubuntu_username = getpass.getuser()
-    # print(f'ubuntu_username={ubuntu_username}')
     some_dir = f"/home/{ubuntu_username}/.mozilla/firefox/"
-    # print(f'some_dir={some_dir}')
-    from glob import glob
 
     subdirs = glob(f"{some_dir}/*/", recursive=True)
-    # print(f'subdirs={subdirs}')
     default_profile = list(
         filter(lambda x: x.endswith(".default-release/"), subdirs)
     )
-    # print(f'default_profile={default_profile}')
     if len(default_profile) > 1 or len(default_profile) < 0:
         raise Exception(f"Error, default profile not found:{default_profile}")
     return default_profile[0]

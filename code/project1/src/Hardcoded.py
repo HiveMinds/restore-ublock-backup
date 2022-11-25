@@ -29,6 +29,10 @@ class Hardcoded:
         self.chromium_driver_filename = "chromedriver90"
 
         # TODO: automate getting default profile key/path.
+        #firefox_profile = webdriver.FirefoxProfile()
+        #firefox_profile.set_preference("browser.privatebrowsing.autostart", False)
+        
         self.firefox_profile = (
             "/home/name/.mozilla/firefox/1k7nmeyz.default-release"
         )
+

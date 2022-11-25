@@ -67,7 +67,7 @@ def upload_file(driver, filepath):
     """Uploads a Ublock Origin backup (template) .txt file into the Ublock
     Origin extension."""
     driver.find_element("id", "restoreFilePicker").send_keys(filepath)
-    time.sleep(3)
+    time.sleep(10)
     alert = driver.switch_to.alert
     print(f"alert.text={alert.text}")
     alert.accept()

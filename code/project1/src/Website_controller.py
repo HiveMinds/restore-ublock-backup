@@ -20,13 +20,14 @@ class Website_controller:
         # TODO: write a try catch, if it fails:
         # TODO: check if firefox is installed with snap.
         # TODO: if yes, ask user to uninstall and re-install with link.
+        
         try:
             # TODO: get the profile automatically.
-
             self.driver = webdriver.Firefox(
                 # executable_path=r"firefox_driver/geckodriver",capabilities=firefox_capabilities
                 executable_path=r"firefox_driver/geckodriver",
                 firefox_profile=self.hardcoded.firefox_profile,
+                #firefox_profile=firefox_profile,
             )
         # pylint: disable=W0707
         except:

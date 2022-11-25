@@ -5,9 +5,9 @@ key. Set GitHub personal access token.
 """
 import argparse
 
-from .GitLab.restore_ublock_backup import RestoreUblockBackup
 from .Hardcoded import Hardcoded
 from .helper import get_browser_drivers
+from .restore_ublock_backup import RestoreUblockBackup
 
 # get browser drivers
 hardcoded = Hardcoded()

@@ -182,7 +182,16 @@ def open_url(driver, url):
     :param driver: object within website_controller that can controll the driver.
     :param url: A link to a website.
     """
-    driver.get(url)
+    try:
+        driver.get(url)
+    except TimeoutError:
+        print("Retry")
+        driver.refresh()
+        print("Refreshed")
+    except TypeError:
+        print("Retry")
+        driver.refresh()
+        print("Refreshed")
     return driver
 
 

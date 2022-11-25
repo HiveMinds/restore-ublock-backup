@@ -1,6 +1,6 @@
 # run: conda env create --file environment.yml
 # include new packages: conda env update --file environment.yml
-name: get_gitlab_generation_token
+name: set-ublock-origin-settings
 channels:
   - conda-forge
 dependencies:

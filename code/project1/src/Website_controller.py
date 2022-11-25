@@ -21,13 +21,16 @@ class Website_controller:
         try:
             options = Options()
 
-            options.add_argument('-profile')
+            options.add_argument("-profile")
             options.add_argument(self.hardcoded.firefox_profile)
 
-            options.set_preference('dom.webdriver.enabled', False)
-            options.set_preference('useAutomationExtension', False)
+            options.set_preference("dom.webdriver.enabled", False)
+            options.set_preference("useAutomationExtension", False)
 
-            self.driver = webdriver.Firefox(options=options,executable_path=r"firefox_driver/geckodriver",)
+            self.driver = webdriver.Firefox(
+                options=options,
+                executable_path=r"firefox_driver/geckodriver",
+            )
         # pylint: disable=W0707
         except:
             # pylint: disable=W0707

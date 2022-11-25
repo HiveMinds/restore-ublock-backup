@@ -3,7 +3,6 @@ import os
 import time
 from code.project1.src.get_ext_id import get_ext_id
 from code.project1.src.Hardcoded import Hardcoded
-from code.project1.src.get_firefox_profile import get_firefox_profile
 from code.project1.src.helper import get_browser_drivers, open_url
 from code.project1.src.Website_controller import Website_controller
 
@@ -31,7 +30,6 @@ class RestoreUblockBackup:
         # Get the settings link.
         ext_id = get_ext_id(website_controller.driver)
         print(f"ext_id={ext_id}")
-        
 
         # Go to extension settings.
         website_controller.driver = open_url(

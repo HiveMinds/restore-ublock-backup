@@ -1,6 +1,7 @@
 """Gets and returns the firefox profile."""
 
 import time
+
 from src.restore_ublock_backup.helper import open_url
 
 

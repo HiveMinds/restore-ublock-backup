@@ -1,6 +1,7 @@
 """Object to run code based on incoming arguments."""
 import os
 import time
+
 from src.restore_ublock_backup.get_ext_id import get_ext_id
 from src.restore_ublock_backup.Hardcoded import Hardcoded
 from src.restore_ublock_backup.helper import get_browser_drivers, open_url

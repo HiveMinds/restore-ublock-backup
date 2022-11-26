@@ -1,10 +1,10 @@
 """Object to run code based on incoming arguments."""
 import os
 import time
-from code.project1.src.get_ext_id import get_ext_id
-from code.project1.src.Hardcoded import Hardcoded
-from code.project1.src.helper import get_browser_drivers, open_url
-from code.project1.src.Website_controller import Website_controller
+from src.restore_ublock_backup.get_ext_id import get_ext_id
+from src.restore_ublock_backup.Hardcoded import Hardcoded
+from src.restore_ublock_backup.helper import get_browser_drivers, open_url
+from src.restore_ublock_backup.Website_controller import Website_controller
 
 
 # pylint: disable=R0903

@@ -1,7 +1,7 @@
 """Gets and returns the firefox profile."""
 
 import time
-from code.project1.src.helper import open_url
+from src.restore_ublock_backup.helper import open_url
 
 
 def get_firefox_profile(driver):

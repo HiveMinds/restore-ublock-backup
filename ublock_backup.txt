@@ -1,8 +1,11 @@
 {
-  "timeStamp": 1669389284704,
+  "timeStamp": 1669506298445,
   "version": "1.45.2",
   "userSettings": {
-    "importedLists": []
+    "externalLists": "https://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/all_search_engines/global.txt",
+    "importedLists": [
+      "https://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/all_search_engines/global.txt"
+    ]
   },
   "selectedFilterLists": [
     "user-filters",
@@ -18,7 +21,8 @@
     "easylist",
     "easyprivacy",
     "urlhaus-1",
-    "plowe-0"
+    "plowe-0",
+    "https://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/all_search_engines/global.txt"
   ],
   "hiddenSettings": {},
   "whitelist": [
@@ -34,5 +38,5 @@
   "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
-  "userFilters": "! 2022-11-25 https://www.startpagina.nl\nwww.startpagina.nl###app > section\nwww.startpagina.nl##.before\\:z-10.before\\:to-transparent.before\\:from-blue-700.before\\:bg-gradient-to-r.before\\:w-8.before\\:inset-y-0.before\\:left-0.before\\:absolute.before\\:block.after\\:to-transparent.after\\:from-blue-700.after\\:bg-gradient-to-l.after\\:w-8.after\\:inset-y-0.after\\:right-0.after\\:absolute.after\\:block.\\|.text-sm-.bg-blue-700.relative.z-\\[201\\].header-navigation\nwww.startpagina.nl##.responsive-column > div.section:nth-of-type(1)\nwww.startpagina.nl##div.section:nth-of-type(3)\nwww.startpagina.nl##div.section:nth-of-type(4)\nwww.startpagina.nl##.column4 > .section\nwww.startpagina.nl##.bg-blue-700.px-6\nwww.startpagina.nl##.sm\\+\\:pb-8.bg-gray-100.pb-16.pt-9.px-6.w-full\nwww.startpagina.nl##.column5 > .section\n"
+  "userFilters": "! 2022-11-25 https://www.startpagina.nl\nwww.startpagina.nl###app > section\nwww.startpagina.nl##.before\\:z-10.before\\:to-transparent.before\\:from-blue-700.before\\:bg-gradient-to-r.before\\:w-8.before\\:inset-y-0.before\\:left-0.before\\:absolute.before\\:block.after\\:to-transparent.after\\:from-blue-700.after\\:bg-gradient-to-l.after\\:w-8.after\\:inset-y-0.after\\:right-0.after\\:absolute.after\\:block.\\|.text-sm-.bg-blue-700.relative.z-\\[201\\].header-navigation\nwww.startpagina.nl##.responsive-column > div.section:nth-of-type(1)\nwww.startpagina.nl##div.section:nth-of-type(3)\nwww.startpagina.nl##div.section:nth-of-type(4)\nwww.startpagina.nl##.column4 > .section\nwww.startpagina.nl##.bg-blue-700.px-6\nwww.startpagina.nl##.sm\\+\\:pb-8.bg-gray-100.pb-16.pt-9.px-6.w-full\nwww.startpagina.nl##.column5 > .section\n\n! 2022-11-26 https://startgoogle.startpagina.nl\n||startgoogle.startpagina.nl/static/images/startpaginalogo.png$image\n||startgoogle.startpagina.nl/static/images/startpaginalogo.png$image\n||startgoogle.startpagina.nl/static/images/startpaginalogo.png$image\nstartgoogle.startpagina.nl###tab-maps\nstartgoogle.startpagina.nl###tab-images\nstartgoogle.startpagina.nl##.active-goeievraag.hover\nstartgoogle.startpagina.nl##.active-themes.hover\nstartgoogle.startpagina.nl###tab-filter\nstartgoogle.startpagina.nl##.set-search-engine\nstartgoogle.startpagina.nl##.footer-top-links\nstartgoogle.startpagina.nl##.footer-bottom-links\nstartgoogle.startpagina.nl##.menu\nstartgoogle.startpagina.nl##.desktop\nstartgoogle.startpagina.nl###organic-results-header > h2\n\n\n###hot-network-questions > ul > li:has(div[title=\"Programming Puzzles & Code Golf Stack Exchange\"])\n###hot-network-questions > ul > li:has(div[title=\"Role-playing Games Stack Exchange\"])\n###hot-network-questions > ul > li:has(div[title=\"Science Fiction & Fantasy Stack Exchange\"])\n###hot-network-questions > ul > li:has(div[title=\"Movies & TV Stack Exchange\"])\n###hot-network-questions > ul > li:has(div[title=\"Puzzling Stack Exchange\"])\n###hot-network-questions > ul > li:has(div[title=\"Arqade\"])\n###hot-network-questions > ul > li:has(div[title=\"Worldbuilding Stack Exchange\"])\n###hot-network-questions\n###sidebar > *:not(.sidebar-related), #left-sidebar\n\n! 2022-11-26 https://stackoverflow.com\n##.sidebar-related.module\n\n! 2022-11-26 https://meta.stackexchange.com\n##.js-footer.site-footer\n##.js-dismissable-hero.ps-relative.fc-black-200.bg-black-750.py24.sm\\:d-none\n\n! 2022-11-26 https://stackoverflow.com\n##.js-achievements-button.s-topbar--item\n##.js-review-button.js-gps-track.s-topbar--item\n##.js-gps-track.px12.m0.s-user-card__small.s-user-card.s-topbar--item\n##.js-help-button.s-topbar--item\n##.s-topbar--container > .s-navigation\n##.js-gps-track.s-topbar--logo\n##.ps-relative.js-pinned-left-sidebar.left-sidebar\n###metaNewQuestionAlertButton\n\n! 2022-11-26 https://android.stackexchange.com\n##.site-header\n\n! 2022-11-26 https://github.com\ngithub.com##.border-bottom.hide-sm.hide-md.hide-lg.mt-5.col-lg-4.col-md-3.width-fit.team-left-column\ngithub.com##.gutter-md-spacious.d-md-flex\n"
 }

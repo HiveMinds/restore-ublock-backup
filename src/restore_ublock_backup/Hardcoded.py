@@ -42,6 +42,12 @@ def get_default_profile_dir():
     default_profile = list(
         filter(lambda x: x.endswith(".default-release/"), subdirs)
     )
-    if len(default_profile) > 1 or len(default_profile) < 0:
-        raise Exception(f"Error, default profile not found:{default_profile}")
+    if not default_profile:
+        for subdir in subdirs:
+            if ".default-release" in subdir:
+                default_profile.append(subdir)
+        if len(default_profile) > 1 or len(default_profile) < 0:
+            raise Exception(
+                f"Error, default profile not found:{default_profile}"
+            )
     return default_profile[0]

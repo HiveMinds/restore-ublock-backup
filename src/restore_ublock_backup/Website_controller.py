@@ -23,7 +23,7 @@ class Website_controller:
 
             options.add_argument("-profile")
             options.add_argument(self.hardcoded.firefox_profile)
-
+            # options.add_argument("window-size=400,600")
             options.set_preference("dom.webdriver.enabled", False)
             options.set_preference("useAutomationExtension", False)
 

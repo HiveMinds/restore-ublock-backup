@@ -182,6 +182,8 @@ assert_firefox_is_installed_using_ppa(){
 	if [ "$(firefox_via_apt)" != "FOUND" ]; then
 		echo "Error, Firefox installation was not performed using ppa and apt." > /dev/tty
 		exit 2
+	else
+		echo "Firefox is already installed."
 	fi
 }
 
@@ -386,6 +388,14 @@ swap_snap_firefox_with_ppa_apt_firefox_installation(){
 	# 5.a Install Firefox using apt.
 	# 5.v Verify firefox is installed succesfully, and only once, using apt/PPA.
 	install_firefox_using_ppa
+
+	# Start firefox for first time.
+	echo "Please enable ghostery and close all other tabs when we open "
+	echo "Firefox next, and open a new tab to allow tabbliss (to work), and "
+	echo "then close Firefox again. <enter>."
+	read -p ""
+
+	firefox https://www.github.com > /dev/null 2>/dev/null
 
 }
 swap_snap_firefox_with_ppa_apt_firefox_installation

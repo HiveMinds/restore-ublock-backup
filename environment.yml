@@ -48,7 +48,8 @@ dependencies:
   - isort
   - pip
   - pip:
-    # TODO: identify exact function(and usage).
+    # Control apt ppa Firefox version.
+    - browsercontroller
     # Auto generate documentation.
     - pdoc3
     # Seems to be an autoformatter like black, but installed using npm instead of pip.

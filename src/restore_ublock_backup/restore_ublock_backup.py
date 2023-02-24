@@ -29,7 +29,7 @@ class RestoreUblockBackup:
         time.sleep(1)
 
         # Get the settings link.
-        ext_id = get_ext_id(website_controller.driver)
+        ext_id = get_ext_id(driver=website_controller.driver)
         print(f"ext_id={ext_id}")
 
         # Go to extension settings.

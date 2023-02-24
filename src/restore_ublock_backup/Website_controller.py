@@ -1,4 +1,5 @@
 """Gets a website controller and opens it."""
+import subprocess
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
@@ -16,6 +17,10 @@ class Website_controller:
         in background or foreground.
         """
         self.hardcoded = Hardcoded()
+
+        # Kill firefox
+        close_firefox()
+
         # To run Firefox browser in foreground
         print("Loading geckodriver")
         try:
@@ -48,3 +53,9 @@ class Website_controller:
         # options = webdriver.ChromeOptions();
         # options.add_argument('headless');
         # options.add_argument('window-size=1200x600'); // optional
+
+def close_firefox() -> None:
+    """Closes firefox if it is open."""
+    if subprocess.call( [ "pkill", "firefox" ] ) > 0:
+        raise SystemError("Firefox not closed.")
+    

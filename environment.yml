@@ -5,7 +5,7 @@ channels:
   - conda-forge
 dependencies:
 # Specify specific python version.
-  - python=3.8
+  - python=3.10
 # Run python tests.
   - pytest-cov
 # Turns relative import paths into absolute import paths.
